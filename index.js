@@ -17,7 +17,7 @@ const Homekitchendata = require("./insertdata/homekitchen");
 const userRoutes = require("./routes/userRoutes");
 const userAddressRoutes = require("./routes/userAddressRoutes");
 
-const port = 5000;
+const port = process.env.BASE_URL || 5000;
 
 app.use(cors());
 app.use(express.json());
