@@ -10,5 +10,5 @@ const mobileSchema = new mongoose.Schema({
   description: String,
 });
 
-const mobile = new mongoose.model("mobiles", mobileSchema);
-module.exports = mobile;
+const mobiles = new mongoose.model("mobiles", mobileSchema);
+module.exports = mobiles;

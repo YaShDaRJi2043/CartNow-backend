@@ -1,11 +1,7 @@
 const mongoose = require("mongoose");
 
-const DB = process.env.DATABASE;
 mongoose
-  .connect(DB, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
+  .connect(process.env.DATABASE)
   .then(() => console.log("database connected"))
   .catch((error) => {
     console.log("error" + error.message);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const addressShcema = new mongoose.Schema({
-  userRef: {
+  userId: {
     type: String,
     require: true,
   },
@@ -42,5 +42,5 @@ const addressShcema = new mongoose.Schema({
   },
 });
 
-const userAddresses = new mongoose.model("userAddress", addressShcema);
-module.exports = userAddresses;
+const addresses = new mongoose.model("addresses", addressShcema);
+module.exports = addresses;

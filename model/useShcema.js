@@ -40,21 +40,6 @@ const useSchema = new mongoose.Schema({
       },
     },
   ],
-
-  verifytoken: {
-    type: String,
-  },
-
-  carts: Array,
-  Addresses: Array,
-  feedbacks: [
-    {
-      feedback: {
-        type: String,
-      },
-    },
-  ],
-  buyitems: Array,
 });
 
 useSchema.pre("save", async function (next) {
@@ -79,49 +64,5 @@ useSchema.methods.genrateAuthtoken = async function (req, res) {
   }
 };
 
-// add to cart data
-useSchema.methods.addcartdata = async function (cart) {
-  try {
-    this.carts = this.carts.concat(cart);
-    await this.save();
-    return this.carts;
-  } catch (error) {
-    console.log(error + "bhai cart add time aai error");
-  }
-};
-
-// buyitems
-useSchema.methods.buyitemdata = async function (buyitem) {
-  try {
-    this.buyitems = this.buyitems.concat(buyitem);
-    await this.save();
-    return this.buyitems;
-  } catch (error) {
-    console.log(error + "error");
-  }
-};
-
-// address data
-useSchema.methods.addressdata = async function (address) {
-  try {
-    this.Addresses = this.Addresses.concat(address);
-    await this.save();
-    return this.Addresses;
-  } catch (error) {
-    console.log(error + "not add");
-  }
-};
-
-//feedback
-useSchema.methods.feedbackdata = async function (feedback) {
-  try {
-    this.feedbacks = this.feedbacks.concat(feedback);
-    await this.save();
-    return this.feedbacks;
-  } catch (error) {
-    console.log(error + "not add");
-  }
-};
-
-const datas = new mongoose.model("datas", useSchema);
-module.exports = datas;
+const users = new mongoose.model("users", useSchema);
+module.exports = users;

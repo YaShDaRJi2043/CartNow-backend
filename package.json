@@ -4,21 +4,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "npx nodemon index.js",
+    "seeder": "node seeder.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "express": "^4.18.1",
+    "express": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.8.0",
+    "juice": "^11.0.1",
+    "mongoose": "^8.13.2",
     "nodemailer": "^6.8.0",
-    "nodemon": "^2.0.19",
-    "react-redux": "^8.0.2",
-    "redux": "^4.2.0"
+    "nodemon": "^2.0.19"
   }
 }

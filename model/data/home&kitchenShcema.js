@@ -10,5 +10,5 @@ const homekitchenSchema = new mongoose.Schema({
   description: String,
 });
 
-const homekitchen = new mongoose.model("homekitchens", homekitchenSchema);
-module.exports = homekitchen;
+const homekitchens = new mongoose.model("homekitchens", homekitchenSchema);
+module.exports = homekitchens;

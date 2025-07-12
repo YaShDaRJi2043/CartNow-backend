@@ -10,5 +10,5 @@ const mensSchema = new mongoose.Schema({
   description: String,
 });
 
-const men = new mongoose.model("mens", mensSchema);
-module.exports = men;
+const mens = new mongoose.model("mens", mensSchema);
+module.exports = mens;
